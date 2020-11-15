@@ -35,7 +35,7 @@ public class Produto {
 
 	private Double custo;
 
-	private int quantidadeArmazenada;
+	private int quantidadeArmazenada = 0;
 
 	private int quantidadeMaxima;
 
@@ -43,6 +43,7 @@ public class Produto {
 
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name ="IdDeposito")
+	@Fetch(FetchMode.JOIN)
 	private Deposito deposito;
 
 

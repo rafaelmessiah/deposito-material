@@ -19,9 +19,15 @@ public class Funcionario {
 	
 	private String cargo;
 	
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name ="cpf_Funcionario" )
-	private List<NotaFiscal> notasFiscais;
+	
+	//Contrutores
+	public Funcionario() {}
+	
+	public Funcionario(long cpf,String nome, String cargo) {
+		this.cpf = cpf;
+		this.nome = nome;
+		this.cargo = cargo;
+	}
 	
 	public long getCpf() {
 		return cpf;
@@ -41,12 +47,7 @@ public class Funcionario {
 	public void setCargo(String cargo) {
 		this.cargo = cargo;
 	}
-	public List<NotaFiscal> getNotasFiscais() {
-		return notasFiscais;
-	}
-	public void setNotasFiscais(List<NotaFiscal> notasFiscais) {
-		this.notasFiscais = notasFiscais;
-	}
+
 	
 	
 	

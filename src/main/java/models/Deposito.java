@@ -33,9 +33,6 @@ public class Deposito {
 	
 	private String tipo;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="IdFilial")
-	private Filial filial;
 	
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name="IdDeposito")
@@ -51,6 +48,14 @@ public class Deposito {
 		this.endereco = endereco;
 		this.tipo = tipo;
 		this.produtos = produtos;
+	}
+	
+	public Deposito(String nome, String endereco, String tipo) {
+		super();
+		this.nome = nome;
+		this.endereco = endereco;
+		this.tipo = tipo;
+		
 	}
 	
 	public long getId() {
@@ -85,14 +90,6 @@ public class Deposito {
 	}
 	
 
-	public Filial getFilial() {
-		return filial;
-	}
-
-	public void setFilial(Filial filial) {
-		this.filial = filial;
-	}
-	
 	
 	
 
