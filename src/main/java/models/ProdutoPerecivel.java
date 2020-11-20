@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 
 @Entity
 public class ProdutoPerecivel extends Produto {
-	
+
 	private Calendar dataValidade;
 
 	public Calendar getDataValidade() {
@@ -16,8 +16,5 @@ public class ProdutoPerecivel extends Produto {
 	public void setDataValidade(Calendar dataValidade) {
 		this.dataValidade = dataValidade;
 	}
-	
-	
-	
 
 }
